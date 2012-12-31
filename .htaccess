@@ -1,0 +1,58 @@
+RewriteEngine On
+
+RewriteRule ^watch_(.*).html movie_watch.php?id=$1
+RewriteRule ^watch_(.*) download.php?op=view&id=$1
+RewriteRule ^download_(.*) download.php?id=$1
+RewriteRule ^subtitle_download_(.*) download.php?action=subtitle&id=$1
+
+
+
+RewriteRule ^movie_([0-9]+)/files.html movie_files.php?id=$1
+
+RewriteRule ^movie_([0-9]+)/subtitles.html movie_subtitles.php?id=$1
+
+RewriteRule ^movie_([0-9]+)/photos.html movie_photos.php?cat=$1
+
+RewriteRule ^movie/photo_([0-9]+).html movie_photos.php?id=$1
+
+
+RewriteRule ^movie_([0-9]+)/actors.html movie_actors.php?id=$1
+
+
+
+RewriteRule ^movie_([0-9]+)/index.html movie_info.php?id=$1
+
+RewriteRule ^movie_([0-9]+)/ movie_info.php?id=$1
+
+
+RewriteRule ^actor_([0-9]+)/photos.html actor_photos.php?cat=$1
+RewriteRule ^actor/photo_([0-9]+).html actor_photos.php?id=$1
+
+RewriteRule ^actor_([0-9]+)/index.html actor_details.php?id=$1
+RewriteRule ^actor_([0-9]+)/ actor_details.php?id=$1
+
+
+RewriteRule ^actors.html actors.php
+RewriteRule ^actors_([0-9]+).html actors.php?start=$1
+
+
+RewriteRule ^cat_(.*)_(.*)_(.*)_(.*).html browse.php?cat=$1&start=$2&orderby=$3&sort=$4
+RewriteRule ^cat_(.*).html browse.php?cat=$1
+
+RewriteRule ^browse.html browse.php
+
+
+RewriteRule ^page_(.*).html index.php?action=pages&id=$1
+
+
+RewriteRule ^profile_(.*).html profile.php?id=$1
+
+RewriteRule ^news_view_(.*).html news.php?id=$1
+RewriteRule ^news_(.*)_(.*).html news.php?cat=$1&start=$2
+RewriteRule ^news_(.*).html news.php?cat=$1
+
+RewriteRule ^news.html news.php
+
+RewriteRule ^style.css css.php
+
+RewriteRule ^sitemap.xml sitemap.php

@@ -1,5 +1,17 @@
-<?
-/* 09-07-2012 : bug fixed : get_movie_file_icons : no custom url_watch implement :: */
+<?php
+/**
+ *  Allomani Movies v2.0
+ * 
+ * @package Allomani.Movies
+ * @version 2.0
+ * @copyright (c) 2006-2018 Allomani , All rights reserved.
+ * @author Ali Allomani <info@allomani.com>
+ * @link http://allomani.com
+ * @license GNU General Public License version 3.0 (GPLv3)
+ * 
+ */
+ 
+ /* 09-07-2012 : bug fixed : get_movie_file_icons : no custom url_watch implement :: */
 
 //-----------------------------
 define('MEMBER_SQL',"member_sql");

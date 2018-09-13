@@ -8,7 +8,7 @@
     $product_name = "Movies";
     $product_ver = "2.0";
 
-    $files_perms = array("config.php","uploads/","license/");
+    $files_perms = array("config.php","uploads/");
 
     $steps = array(1 => 'Server Requirements' , 2=> 'Configuration' , 3=> 'Database Clean' , 4=> 'Database Installation' , 5=> 'Installation Done');
     $step = (int) $_REQUEST['step'];
@@ -389,11 +389,7 @@ $newImport -> import ();
     
     
     function print_step_5(){
-        print "<span class='success'>Installation done successfully.</span>
-        <br><br>
-       <form action='../license_gen.php' method='post'> 
-       <input type='submit' value='Activate your License'>
-       </form>";
+        print "<span class='success'>Installation done successfully.</span>";
         
     }
 
